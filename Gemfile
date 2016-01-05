@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+# Use Devise for flexible authentication
+gem 'devise'
