@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Configure Devise url options for production environment
+  config.action_mailer.default_url_options = { host: 'wikibed.herokuapp.com' }
 end
