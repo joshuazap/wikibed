@@ -12,7 +12,7 @@
   </thead>
 
   <tbody>
-    <% @wikis.each do |wiki| %>
+    <% policy_scope(@user.wikis).each do |wiki| %>
       <tr>
         <td><%= wiki.title %></td>
         <td><%= wiki.body %></td>
