@@ -47,3 +47,6 @@ end
 
 # Use Devise for flexible authentication
 gem 'devise'
+
+# Use Figaro for handling sensitive data with environment variables
+gem 'figaro'
