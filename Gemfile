@@ -55,3 +55,6 @@ gem 'devise'
 
 # Use Figaro for handling sensitive data with environment variables
 gem 'figaro'
+
+# Use Pundit for authorization system
+gem 'pundit'
