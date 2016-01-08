@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   devise :confirmable, :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :wikis
+
+  enum role: [:standard, :premium, :admin]
+  after_initialize { self.role ||= :standard }
 end
