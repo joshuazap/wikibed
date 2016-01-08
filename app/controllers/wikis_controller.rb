@@ -59,6 +59,7 @@ class WikisController < ApplicationController
   # DELETE /wikis/1
   # DELETE /wikis/1.json
   def destroy
+    @wikis = policy_scope(Wiki)
     @wiki.destroy
     respond_to do |format|
       format.html { redirect_to wikis_url, notice: 'Wiki was successfully destroyed.' }
