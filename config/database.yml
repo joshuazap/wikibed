@@ -1,14 +1,16 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  host: localhost
-  port: 5433
   pool: 5
+  username: ubuntu
+  password: cloud9
+  host: <%= ENV['IP'] %>
+
   timeout: 5000
 
 development:
   <<: *default
-  database: db/wikibed_dev
+  database: db/wikibed_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -19,4 +21,4 @@ test:
 
 production:
   <<: *default
-  database: db/wikibed_prod
+  database: db/wikibed_production
