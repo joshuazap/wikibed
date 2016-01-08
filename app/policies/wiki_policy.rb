@@ -8,11 +8,15 @@ class WikiPolicy < ApplicationPolicy
     end
 
     def resolve
-      scope
+      if user.admin?
+        scope.all
+      else
+        scope.where(:private => false)
+      end
     end
+  end
 
-    def destroy?
-      user.admin? || wiki.user_id == user.id
-    end
+  def destroy?
+    user.admin? || wiki.user_id == user.id
   end
 end
