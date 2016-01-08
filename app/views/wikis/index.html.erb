@@ -20,7 +20,11 @@
         <td><%= wiki.user %></td>
         <td><%= link_to 'Show', wiki %></td>
         <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
-        <td><%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <% if policy(@wiki).destroy? %>
+            <%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
