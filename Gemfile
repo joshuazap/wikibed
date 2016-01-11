@@ -63,3 +63,6 @@ gem 'figaro'
 
 # Use Pundit for authorization system
 gem 'pundit'
+
+# Use Stripe for payments system
+gem 'stripe'
