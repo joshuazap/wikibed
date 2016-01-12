@@ -2,10 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username: ubuntu
-  password: cloud9
-  host: <%= ENV['IP'] %>
-
   timeout: 5000
 
 development:

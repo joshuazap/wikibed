@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-# Use PostgreSQL as the production database for Active Record
-gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,6 +35,7 @@ group :development, :test do
   gem 'byebug'
   # Use Faker gem to generate seed data
   gem 'faker', '~> 1.6.1'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -53,6 +52,9 @@ end
 group :production do
   # Configure application to serve static assets
   gem 'rails_12factor'
+
+  # Use PostgreSQL as the production database for Active Record
+  gem 'pg'
 end
 
 # Use Devise for flexible authentication
