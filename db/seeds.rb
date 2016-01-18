@@ -8,13 +8,6 @@
 require 'rubygems'
 require 'faker'
 
-# Create test admin
-admin = User.create!(
-  email: 'joshuazap+wbadmin@gmail.com',
-  password: 'mypassword')
-admin.skip_confirmation!
-admin.save!
-
 # Create fake users
 5.times do
   user = User.create!(
@@ -27,7 +20,7 @@ end
 users = User.all
 
 # Create fake wikis
-50.times do
+25.times do
   wiki = Wiki.create!(
     user: users.sample,
     title: Faker::Lorem.sentence,
