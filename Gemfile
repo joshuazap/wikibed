@@ -72,3 +72,6 @@ gem 'pundit'
 
 # Use Stripe for payments system
 gem 'stripe'
+
+# Use Redcarpet gem for Markdown parsing
+gem 'redcarpet'
