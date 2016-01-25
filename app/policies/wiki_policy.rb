@@ -5,7 +5,7 @@ class WikiPolicy < ApplicationPolicy
       if user.admin?
         scope.all
       else
-        scope.where(:private => false)
+        scope.where(private: false && record.user == user)
       end
     end
   end
