@@ -75,3 +75,6 @@ gem 'stripe'
 
 # Use Redcarpet gem for Markdown parsing
 gem 'redcarpet'
+
+# Use Bootstrap
+gem 'bootstrap-sass'
