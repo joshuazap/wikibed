@@ -1,31 +1,34 @@
-<h1>Listing Wikis</h1>
+<div class="container">
+  <%= link_to 'New Wiki', new_wiki_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Private</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wikis.each do |wiki| %>
+  <table class="table table-striped table-hover">
+    <thead>
       <tr>
-        <td><%= wiki.title %></td>
-        <td><%= wiki.body %></td>
-        <td><%= wiki.private %></td>
-        <td><%= wiki.user %></td>
-        <td><%= link_to 'Show', wiki %></td>
-        <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
-        <td><%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Private</th>
+        <th>User</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @wikis.each do |wiki| %>
+        <tr>
+          <td><%= wiki.title %></td>
+          <td><%= wiki.body %></td>
+          <td><%= wiki.private %></td>
+          <% if wiki.user %>
+            <td><%= wiki.user.email %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+          <td><%= link_to 'Show', wiki %></td>
+          <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
+          <td><%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
-
-<%= link_to 'New Wiki', new_wiki_path %>

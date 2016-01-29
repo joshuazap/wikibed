@@ -15,3 +15,13 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar {
+  margin-top: 5px;
+  display: inline-block;
+  height: inherit;
+}
+
+.user-info {
+  float: right;
+}
