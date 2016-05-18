@@ -1,5 +1,5 @@
 # Wikibed
-Alt-H3 A safe place to rest your wiki pages
+### A safe place to rest your wiki pages
 
 Wikibed was created for users to browse, create, and edit public and private wiki pages. The application includes:
 - a responsive design
@@ -36,4 +36,5 @@ rspec spec
 * Deployment instructions
 
 This app is deployed as a live demo at https://wikibed.herokuapp.com/
+
 If you are interested in learning how to deploy Ruby on Rails apps on Heroku or you have questions, feel free to contact me!
