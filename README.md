@@ -12,21 +12,28 @@ Check out a live demo of this app at https://wikibed.herokuapp.com/
 ## Other details
 
 * Ruby version 2.3.0
+* Rails version 4.2.5
 
 * Configuration
 
+````bash
+git clone https://github.com/joshuazap/wikibed.git
+bundle install --without production
+````
+
 * Database creation
 
-* Database initialization
+````bash
+rake db:create
+````
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+````bash
+rspec spec
+````
 
 * Deployment instructions
 
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This app is deployed as a live demo at https://wikibed.herokuapp.com/
+If you are interested in learning how to deploy Ruby on Rails apps on Heroku or you have questions, feel free to contact me!
