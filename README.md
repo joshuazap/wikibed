@@ -6,6 +6,7 @@ Wikibed was created for users to browse, create, and edit public and private wik
 - user account creation, sign in, and sign out
 - email confirmations and integration through SendGrid
 - standard and premium accounts with streamlined upgrading
+- endless (or infinite) scrolling index view
 
 Check out a live demo of this app at https://wikibed.herokuapp.com/
 

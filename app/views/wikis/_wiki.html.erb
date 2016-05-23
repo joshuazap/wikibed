@@ -1,0 +1,7 @@
+<div class="wiki">
+  <h2><%= link_to wiki.title, wiki %></h2>
+  <div class="details">
+    <p><%= wiki.body %></p>
+    <p>Created by <em><%= truncate(wiki.user.email, length: 9) %></em></p>
+  </div>
+</div>

@@ -1,34 +1,14 @@
 <div class="container">
-  <%= link_to 'New Wiki', new_wiki_path %>
-
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-        <th>Private</th>
-        <th>User</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @wikis.each do |wiki| %>
-        <tr>
-          <td><%= wiki.title %></td>
-          <td><%= wiki.body %></td>
-          <td><%= wiki.private %></td>
-          <% if wiki.user %>
-            <td><%= wiki.user.email %></td>
-          <% else %>
-            <td></td>
-          <% end %>
-          <td><%= link_to 'Show', wiki %></td>
-          <td><%= link_to 'Edit', edit_wiki_path(wiki) %></td>
-          <td><%= link_to 'Destroy', wiki, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+  <h1>Wikibed</h1>
+  <h4><%= link_to 'Create a new public or private wiki', new_wiki_path %></h4>
 </div>
-<br>
+
+<div class="container">
+  <div id="wikis">
+    <%= render @wikis %>
+  </div>
+</div>
+
+<div class="container">
+  <h3><%= will_paginate @wikis, previous_label: h("<"), next_label: h(">") %></h3>
+</div>

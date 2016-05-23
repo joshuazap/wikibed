@@ -1,0 +1,7 @@
+$('#wikis').append('<%= j render(@wikis) %>');
+<% if @wikis.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@wikis) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
+<% sleep 0.5 %>

@@ -5,12 +5,13 @@ class WikisController < ApplicationController
   # GET /wikis
   # GET /wikis.json
   def index
-    @wikis = policy_scope(Wiki)
+    @wikis = Wiki.order("title").paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /wikis/1
   # GET /wikis/1.json
   def show
+    @wikis = Wiki.find(params[:id])
   end
 
   # GET /wikis/new

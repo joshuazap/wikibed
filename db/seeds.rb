@@ -9,7 +9,7 @@ require 'rubygems'
 require 'faker'
 
 # Create fake users
-5.times do
+25.times do
   user = User.create!(
     email: Faker::Internet.email,
     password: Faker::Lorem.characters(10)
@@ -20,7 +20,7 @@ end
 users = User.all
 
 # Create fake wikis
-25.times do
+100.times do
   wiki = Wiki.create!(
     user: users.sample,
     title: Faker::Lorem.sentence,
