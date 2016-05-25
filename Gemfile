@@ -33,9 +33,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
-  # Use Faker gem to generate seed data
-  gem 'faker', '~> 1.6.1'
-
   #Use SQLite3 as the development and test database for Active Record
   gem 'sqlite3'
 
@@ -57,9 +54,13 @@ end
 group :production do
   # Configure application to serve static assets
   gem 'rails_12factor'
+
   # Use PostgreSQL as the production database for Active Record
   gem 'pg'
 end
+
+# Use Faker gem to generate seed data
+gem 'faker', '~> 1.6.1'
 
 # Use Devise for flexible authentication
 gem 'devise'
