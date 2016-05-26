@@ -8,7 +8,7 @@ Wikibed was created for users to browse, create, and edit public and private wik
 - standard and premium accounts with streamlined upgrading
 - endless (or infinite) scrolling index view
 
-Check out a live demo of this app at https://wikibed.herokuapp.com/
+Built with test-driven development using Ruby, Rails, jQuery, AJAX, Bootstrap and PostreSQL. Check out a live demo of this app at https://wikibed.herokuapp.com/
 
 ![Wikibed screenshot](http://www.joshuazapata.com/img/wikibed_screen.png)
 
