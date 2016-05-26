@@ -28,6 +28,10 @@
   height: inherit;
 }
 
+.navbar-brand {
+  text-decoration: bold;
+}
+
 .user-info {
   float: right;
 }
@@ -78,6 +82,17 @@
 
 .btn a {
   color: white;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.btn a:focus {
+  color: white;
+  text-decoration: none;
 }
 
 .flex-container {
@@ -86,4 +101,21 @@
 
 .flex-item {
   margin: auto;
+}
+
+a.back-to-top {
+	display: none;
+	width: 60px;
+	height: 60px;
+	text-indent: -9999px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+  border-radius: 30px;
+	background-color: #337ab7;
+  background-image: url("arrow-up-grey.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
