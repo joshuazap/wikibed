@@ -10,6 +10,8 @@ Wikibed was created for users to browse, create, and edit public and private wik
 
 Check out a live demo of this app at https://wikibed.herokuapp.com/
 
+![Wikibed screenshot](http://www.joshuazapata.com/img/wikibed_screen.png)
+
 ## Other details
 
 * Ruby version 2.3.0
