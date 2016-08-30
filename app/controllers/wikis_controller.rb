@@ -5,7 +5,7 @@ class WikisController < ApplicationController
   # GET /wikis
   # GET /wikis.json
   def index
-    @wikis = Wiki.order("title").paginate(:page => params[:page], :per_page => 5)
+    @wikis = Wiki.order("title").paginate(:page => params[:page], :per_page => 6)
   end
 
   # GET /wikis/1
