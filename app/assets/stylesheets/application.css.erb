@@ -16,12 +16,6 @@
  //= depend_on_asset "arrow-up-grey.png"
  */
 
-body {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
-  background-size: cover;
-  padding: 30px;
-}
-
 #hex1 {
   width: 300px;
   height: 300px;
@@ -70,7 +64,19 @@ body {
 
 .hexagon-content {
   z-index: 100;
+  color: white;
+  text-decoration: none;
   text-shadow: #101010 1px 0 10px;
+}
+
+.hexagon-content h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn a:hover {
+  color: white;
+  text-decoration: none;
 }
 
 .come-in {
@@ -155,14 +161,6 @@ body {
       padding: 0.1em 0.25em;
     }
   }
-}
-
-h2 a {
-  color: white;
-}
-
-p {
-  color: white;
 }
 
 .btn a {
