@@ -1,5 +1,9 @@
-<div class="module">
-  <h2><%= link_to wiki.title, wiki %></h2>
-  <p><%= wiki.body %></p>
-  <p>Created by <em><%= truncate(wiki.user.email, length: 9) %></em></p>
+<div id="hex1" class="hexagon-wrapper">
+  <div id="color1" class="hexagon">
+    <div class="hexagon-content">
+      <h2><%= link_to truncate(wiki.title, length: 27), wiki %></h2>
+      <p><%= truncate(wiki.body, length: 90) %></p>
+      <p>Created by <em><%= truncate(wiki.user.email, length: 9) %></em></p>
+    </div>
+  </div>
 </div>

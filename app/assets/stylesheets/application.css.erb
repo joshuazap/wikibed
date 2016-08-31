@@ -16,27 +16,61 @@
  //= depend_on_asset "arrow-up-grey.png"
  */
 
-section {
-  background: #eee;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  overflow: hidden;
+body {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/blurry-blue.jpg);
+  background-size: cover;
+  padding: 30px;
 }
 
-.module {
-  width: 45%;
-  min-height: 200px;
-  background: white;
+#hex1 {
+  width: 300px;
+  height: 300px;
+}
+
+#color1 {
+  background-color: #337ab7;
+}
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 20px;
   position: relative;
-  float: left;
-  padding: 20px;
-  margin-right: 4%;
-  margin-bottom: 4%;
-  &:nth-child(even) {
-    margin-right: 0;
-  }
-  box-shadow: 0 1px 3px rgba(black, 0.2);
+  display: inline-block;
+}
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+}
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  z-index: -1;
+}
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
+  z-index: -1;
+}
+
+.hexagon-content {
+  z-index: 100;
+  text-shadow: #101010 1px 0 10px;
 }
 
 .come-in {
@@ -121,6 +155,14 @@ section {
       padding: 0.1em 0.25em;
     }
   }
+}
+
+h2 a {
+  color: white;
+}
+
+p {
+  color: white;
 }
 
 .btn a {
