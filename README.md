@@ -1,43 +1,37 @@
 # Wikibed
-### A safe place to rest your wiki pages
 
-Wikibed was created for users to browse, create, and edit public and private wiki pages. The application includes:
-- a responsive design
-- user account creation, sign in, and sign out
-- email confirmations and integration through SendGrid
-- standard and premium accounts with streamlined upgrading
-- endless (or infinite) scrolling index view
+**Status: archive / demonstration only (2016).** Not a production product. Historical Heroku URLs are retired.
 
-Built with test-driven development using Ruby, Rails, jQuery, AJAX, Bootstrap and PostreSQL. Check out a live demo of this app at https://wikibed.herokuapp.com/
+A Rails wiki: public and private pages, collaborators, Devise confirmable, and a Stripe premium upgrade. Built for GitHub / LinkedIn review of full-stack Rails craft — not as a live SaaS.
 
-![Wikibed screenshot](http://www.joshuazapata.com/img/wikibed_screen.png)
+**Author:** [Joshua Zapata](https://zapatas.org) · [Zapatas](https://www.linkedin.com/company/zapatas-org)
 
-## Other details
 
-* Ruby version 2.3.0
-* Rails version 4.2.5
+## What this demonstrates
 
-* Configuration
+- Rails CRUD with Devise + Pundit scoped records
+- Collaborator membership on private pages
+- Stripe subscription upgrade (standard / premium / admin)
+- Infinite-scroll index (jQuery / AJAX)
+- TDD with RSpec (era-typical Bloc stack)
 
-````bash
+## Stack (frozen)
+
+- Ruby 2.2–2.3 · Rails 4.2.5 · PostgreSQL in production, SQLite in development
+- Bootstrap 3 · jQuery · SendGrid (historical)
+
+## Local demonstration
+
+```bash
 git clone https://github.com/joshuazap/wikibed.git
+cd wikibed
 bundle install --without production
-````
-
-* Database creation
-
-````bash
-rake db:create
-````
-
-* How to run the test suite
-
-````bash
+rake db:create db:migrate
 rspec spec
-````
+```
 
-* Deployment instructions
+Ruby / Rails versions in the Gemfile are historical. Use a version manager if the app still boots; otherwise read the code as a 2016 snapshot.
 
-This app is deployed as a live demo at https://wikibed.herokuapp.com/
+## License
 
-If you are interested in learning how to deploy Ruby on Rails apps on Heroku or you have questions, feel free to contact me!
+Demonstration source for portfolio review. See the repository on GitHub: [joshuazap/wikibed](https://github.com/joshuazap/wikibed).

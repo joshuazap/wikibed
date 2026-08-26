@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Wikibed</title>
+  <meta charset="utf-8">
+  <title>Wikibed (archive) — Joshua Zapata</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="2016 archive demonstration: collaborative public and private wiki pages in Rails. Not a production product. Built by Joshua Zapata.">
+  <meta name="author" content="Joshua Zapata">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://github.com/joshuazap/wikibed">
+  <meta property="og:title" content="Wikibed (archive) — Joshua Zapata">
+  <meta property="og:description" content="2016 Rails wiki demonstration. Career/portfolio archive only.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/joshuazap/wikibed">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Wikibed","description":"Archive demonstration of a Rails wiki with private pages and collaborators.","codeRepository":"https://github.com/joshuazap/wikibed","programmingLanguage":"Ruby","author":{"@type":"Person","name":"Joshua Zapata","url":"https://zapatas.org"}}
+  </script>
 </head>
 
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <aside class="archive-banner" role="note">
+    <strong>Archive demonstration (2016).</strong>
+    Not a production product.
+    <a href="https://zapatas.org">Joshua Zapata / Zapatas</a>
+    ·
+    <a href="https://github.com/joshuazap/wikibed">Source on GitHub</a>
+  </aside>
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -24,7 +43,7 @@
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li class="active"><%= link_to "Home", root_path, :class => 'navbar-link' %></li>
-          <li><a href="http://www.joshuazapata.com">Contact</a></li>
+          <li><a href="https://zapatas.org">Zapatas</a></li>
           <% if user_signed_in? %>
           <div class="user-info">
             <% if current_user.subscribed? %>
